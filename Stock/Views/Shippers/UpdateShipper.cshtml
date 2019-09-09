@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Обновление поставщика";
+}
+
+<div>
+    <h2>@ViewBag.Title.</h2>
+    <form method="post" action="">
+        <p>Введите название оргнанизации: </p>
+        <input type="text" name="Name" value="@ViewBag.Shipper.Name" />
+        <p>Введите адресс:</p>
+        <input type="text" name="Address" value="@ViewBag.Shipper.Address"/>
+        <p>Введите информацию о поставщике:</p>
+        <input type="text" name="Information" value="@ViewBag.Shipper.Information"/>
+        <br />
+        <br />
+        <input type="submit" value="Изменить" />
+    </form>
+</div>
+
+
+

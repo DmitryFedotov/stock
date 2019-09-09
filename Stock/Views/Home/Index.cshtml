@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Склад товаров";
+}
+<div>
+    <h2>@ViewBag.Title.</h2>
+    <table>
+        <tr>
+            <td><p>Уникальный идентификатор</p></td>
+            <td><p>Название товара</p></td>
+            <td><p>Количество</p></td>
+            <td><p>Единица измерения</p></td>
+            <td><p>Цена за 1 ед.измерения в руб.</p></td>
+            <td><p>Поставщик</p></td>
+        </tr>
+        @foreach (var p in ViewBag.Products)
+        {
+            <tr>
+                <td><p>@p.Id</p></td>
+                <td><p>@p.Name</p></td>
+                <td><p>@p.Amount</p></td>
+                <td><p>@p.Unit</p></td>
+                <td><p>@p.PriceForOne</p></td>
+                <td><p>@p.Shipper.Name</p></td>
+            </tr>
+        }
+    </table>
+    <br />
+</div>
+<div>
+    <input type="submit" id="btnOpenPageAddProduct" value="Добавить" onclick="location.href ='/Products/AddProduct/'" />
+    <input type="submit" id="btnUpdateProduct" value="Изменить" onclick="location.href ='/Products/InputUpdate/'" />
+    <input type="submit" id="btnDeleteProduct" value="Удалить" onclick="location.href ='/Products/InputDel/'" />
+</div>

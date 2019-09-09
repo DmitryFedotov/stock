@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Поставщики";
+}
+<div>
+    <h2>@ViewBag.Title.</h2>
+    <table>
+        <tr>
+            <td><p>Уникальный идентификатор</p></td>
+            <td><p>Название</p></td>
+            <td><p>Адрес</p></td>
+            <td><p>Информация</p></td>
+        </tr>
+        @foreach (var p in ViewBag.Shippers)
+        {
+            <tr>
+                <td><p>@p.Id</p></td>
+                <td><p>@p.Name</p></td>
+                <td><p>@p.Address</p></td>
+                <td><p>@p.Information</p></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <input type="submit" id="btnOpenPageAddShipper" value="Добавить" onclick="location.href ='/Shippers/AddShipper/'" />
+    <input type="submit" id="btnUpdateShipper" value="Изменить" onclick="location.href ='/Shippers/InputUpdateShipper/'" />
+    <input type="submit" id="btnDeleteShipper" value="Удалить" onclick="location.href ='/Shippers/InputDelShipper/'" />
+</div>
+
+

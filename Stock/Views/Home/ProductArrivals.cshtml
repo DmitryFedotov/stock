@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Перемещение товара";
+}
+<div>
+    <h2>@ViewBag.Title.</h2>
+    <table>
+        <tr>
+            <td><p>Дата создания</p></td>
+            <td><p>Название товара</p></td>
+            <td><p>Количество</p></td>
+            <td><p>Единица измерения</p></td>
+            <td><p>Цена за 1 ед.измерения в руб.</p></td>
+            <td><p>Поставщик</p></td>
+            <td><p>Информация</p></td>
+        </tr>
+        @foreach (var p in ViewBag.ProductArrivals)
+        {
+            <tr>
+                <td><p>@p.Date</p></td>
+                <td><p>@p.ProductName</p></td>
+                <td><p>@p.ProductAmount</p></td>
+                <td><p>@p.ProductUnit</p></td>
+                <td><p>@p.ProductPriceForOne</p></td>
+                <td><p>@p.ShipperName</p></td>
+                <td><p>@p.TransactionInformation</p></td>
+            </tr>
+        }
+    </table>
+    <br />
+</div>

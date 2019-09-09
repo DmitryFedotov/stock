@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Добавление товара";
+}
+
+<div>
+    <h2>@ViewBag.Title.</h2>
+    <form method="post" action="">
+        <p>Введите название товара: </p>
+        <input type="text" name="Name" />
+        <p>Введите количество товара:</p>
+        <input type="number" name="Amount" />
+        <p>Введите единицу измерения:</p>
+        <input type="text" name="Unit" />
+        <p>Введите цену за 1 ед.измерения в рублях:</p>
+        <input type="text" name="PriceForOne" />
+        <br />
+        <br />
+        @Html.DropDownList("shipper",ViewBag.ShippersSelect as SelectList, "Выберите поставщика");  
+        <br />
+        <br />
+        <input type="submit" value="Добавить товар" />
+    </form>
+</div>
+

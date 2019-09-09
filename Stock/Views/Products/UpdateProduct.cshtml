@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Изменение товара";
+}
+
+<div>
+    <h2>@ViewBag.Title.</h2>
+    <form method="post" action="">
+        <p>Название товара: </p>
+        <input type="text" name="Name" value="@ViewBag.Product.Name" />
+        <p>Остаток товара на складе:</p>
+        <input type="number" name="Amount" value="@ViewBag.Product.Amount" />
+        <p>Единицу измерения:</p>
+        <input type="text" name="Unit" value="@ViewBag.Product.Unit" />
+        <p>Цена за 1 ед.измерения в рублях:</p>
+        <input type="text" name="PriceForOne" value="@ViewBag.Product.PriceForOne" />
+        <br />
+        <br />
+        @Html.DropDownList("shipper", ViewBag.ShippersSelect as SelectList, "Выберите поставщика");
+        <br /><br />
+        <p>Если поставщик не изменился, то нужно выбрать текущего.</p>
+        <br /><br />
+        <input type="submit" value="Изменить" />
+    </form>
+</div>
+
+
